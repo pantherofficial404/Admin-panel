@@ -1,11 +1,16 @@
 // Importing Libraries
 const express = require('express');
 const hbs = require("express-handlebars");
-const adminRouter = require("./Routers/adminRouter")
 const path = require('path')
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose")
 const app = express();
+
+// Importing Routers
+const homeRouter = require("./Routers/homeRouter");
+const userRouter = require("./Routers/userRouter");
+const servicesRouter = require('./Routers/servicesRouter');
+const dashboardRouter = require("./Routers/dashboardRouter");
 
 // Setup express handlebars
 app.engine('hbs', hbs({
@@ -13,6 +18,7 @@ app.engine('hbs', hbs({
     defaultLayout: __dirname + "/views/layout/main",
     partialsDir: __dirname + "/views/partials"
 }));
+
 app.set('view engine', 'hbs');
 app.use(bodyParser.urlencoded({
     extended: false
@@ -20,7 +26,10 @@ app.use(bodyParser.urlencoded({
 app.use('/static', express.static(path.join(__dirname, 'public')));
 
 // Setup Routers
-app.use("/admin", adminRouter);
+app.use("/",homeRouter);
+app.use("/user",userRouter);
+app.use("/services",servicesRouter);
+app.use("/dashboard",dashboardRouter);
 
 // Initialize The Port Number
 const PORT = 5000;
@@ -34,6 +43,7 @@ mongoose.connect(DATABASEURL, {
         console.log("Connected To The Database")
     }
 })
+
 // Running The Server
 app.listen(PORT, (err) => {
     if (err) {
