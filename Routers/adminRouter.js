@@ -1,16 +1,22 @@
 const express = require("express");
 const router = express.Router();
-
+const User = require("../model/User");
 router.get("/", (req, res, next) => {
     res.render("home")
 })
 
 router.post("/", (req, res, next) => {
-    console.log(req.body.email)
-    console.log(req.body.password)
-    // code For Adding Database
-    console.log("Added To The Database")
-    res.redirect("/admin")
+    const user = new User({
+        email: req.body.email,
+        password: req.body.password
+    })
+    user.save((err) => {
+        if (err) {
+            console.log("Unable to Add Data")
+        } else {
+            res.redirect("/admin")
+        }
+    })
 })
 
 module.exports = router;
