@@ -16,10 +16,10 @@ app.set('view engine', 'hbs');
 app.use(bodyParser.urlencoded({
     extended: false
 }))
-app.use('/static', express.static(path.join(__dirname, 'public')))
+app.use('/static', express.static(path.join(__dirname, 'public')));
 
 // Setup Routers
-app.use("/admin", adminRouter)
+app.use("/admin", adminRouter);
 
 // Initialize The Port Number
 const PORT = 3000;
