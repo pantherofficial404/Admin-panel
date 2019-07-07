@@ -6,7 +6,7 @@ const homeRouter = require('./routers/homeRouter');
 const dashBoardRouter = require('./routers/dashBoardRouter');
 
 
-//setup edngin
+//setup engine
 app.engine('hbs', hbs({
     extname: 'hbs',
     defaultLayout: __dirname + '/views/layouts/main',
@@ -19,10 +19,12 @@ app.set('view engine', 'hbs');
 app.use('/static', express.static(path.join(__dirname, 'public')));
 
 //render index page
-const PORT = 3000;
+
 app.use('/', homeRouter);
 app.use('/home', dashBoardRouter);
 
+//port
+const PORT = 3000;
 app.listen(PORT, (err) => {
     if (err) {
         console.log(err);
