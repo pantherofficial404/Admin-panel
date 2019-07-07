@@ -6,7 +6,6 @@ const bodyParser = require("body-parser");
 const app = express();
 
 // Importing Routers
-const homeRouter = require("./Routers/homeRouter");
 const userRouter = require("./Routers/userRouter");
 const servicesRouter = require('./Routers/servicesRouter');
 const dashboardRouter = require("./Routers/dashboardRouter");
@@ -27,11 +26,10 @@ app.use(bodyParser.urlencoded({
 app.use('/static', express.static(path.join(__dirname, 'public')));
 
 // Setup Routers
-app.use("/",homeRouter);
 app.use("/user",userRouter);
 app.use("/services",servicesRouter);
 app.use("/dashboard",dashboardRouter);
-app.use("/admin",adminRouter);
+app.use("/",adminRouter);
 
 
 // Initialize The Port Number

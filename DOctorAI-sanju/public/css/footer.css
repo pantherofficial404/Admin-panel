@@ -5,7 +5,7 @@ footer{
     font-weight:400;
     color: #FFFFFF;
     margin-top: 5rem;
-    padding: 0.5rem;
+    padding: -20px;
     display: flex;
     bottom: 0;
     position: fixed;
