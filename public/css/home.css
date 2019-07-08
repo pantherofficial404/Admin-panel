@@ -1,0 +1,87 @@
+:root {
+    --themcolor: #1E90FF;
+    --secondsvg: #FFD54F;
+    --firstsvg: #4CAF50;
+}
+
+@import url('https://fonts.googleapis.com/css?family=DM+Serif+Text&display=swap');
+@import url('https://fonts.googleapis.com/css?family=DM+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css?family=PT+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap');
+
+
+
+/*card section*/
+
+.card-content i {
+    color: var(--themcolor);
+    font-size: 70px;
+}
+
+.card {
+    height: 15rem;
+}
+
+.User,
+.devloper {
+    color: #757575;
+    font-size: 0.9375rem !important;
+    position: absolute;
+    right: 1.25rem;
+    top: 0.625rem;
+}
+
+
+.num {
+    color: #757575;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 2.5rem;
+    text-align: end;
+}
+
+.svg-icon_1 {
+    height: 100%;
+    width: 100%;
+    fill: var(--firstsvg);
+}
+
+.svg-icon_2 {
+    height: 100%;
+    width: 100%;
+    fill: var(--secondsvg);
+}
+
+.svg-icon_3 {
+    height: 100%;
+    width: 100%;
+    fill: var(--themcolor);
+}
+
+/*logo images*/
+/*logo*/
+.img-responsive {
+    height: 18rem !important;
+    width: 18rem !important;
+    margin-bottom: 2rem;
+
+}
+
+
+/*media for small scree*/
+@media (max-width:600px) {
+
+    .nav-wrapper i {
+        position: relative;
+        left: 3% !important;
+        margin-top: 0.5rem;
+        cursor: pointer;
+    }
+
+    .side-nav {
+        margin: 0.875px 0px;
+    }
+
+    .card-section {
+        margin-right: 0.2rem;
+    }
+}
