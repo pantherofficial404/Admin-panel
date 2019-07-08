@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="/static/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+     <script src="https://kit.fontawesome.com/c3daf16343.js"></script>
+
 
 
     <title>Doctor AI - Admin Panel</title>
@@ -15,8 +17,19 @@
 
 <body>
     {{> navigationMenu }}
+    {{>footer }}
     {{{body}}}
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"></script>
+
+    <script type="text/javascript">
+        $(".num").counterUp({
+            delay: 10,
+            time: 1000
+        });
+    </script>
 </body>
 
 </html>
