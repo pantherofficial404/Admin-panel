@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Doctor AI</title>
+    <script src="https://kit.fontawesome.com/c3daf16343.js"></script>
+    <!--mateirla icon link-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--matrialize css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+
+    {{> navigation }}
+    <div style="display:flex;">
+        <div style="display: flex;flex-grow:1;">
+            {{> sidedrawer }}
+        </div>
+        <div style="display: flex;flex-grow:9;justify-content: center;align-items: center;flex-direction: column;">
+            {{{ body }}}
+        </div>
+    </div>
+    {{> footer}}
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"></script>
+
+    <script type="text/javascript">
+        $(".num").counterUp({
+            delay: 10,
+            time: 1000
+        });
+    </script>
+
+
+
+    <script src="/static/javascript/script.js">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+</html>

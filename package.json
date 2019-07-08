@@ -1,17 +1,25 @@
 {
-  "name": "adminpanel",
+  "name": "admin-panel",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "index.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/doctor-ai/Admin-panel.git"
   },
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/doctor-ai/Admin-panel/issues"
+  },
+  "homepage": "https://github.com/doctor-ai/Admin-panel#readme",
   "dependencies": {
     "body-parser": "^1.19.0",
     "express": "^4.17.1",
     "express-handlebars": "^3.1.0",
-    "mongoose": "^5.6.2"
+    "mongoose": "^5.6.3"
   }
 }
