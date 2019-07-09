@@ -276,7 +276,6 @@ footer h6 {
 
 .error-heading {
     height: 100vh;
-    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -294,7 +293,6 @@ footer h6 {
 }
 
 .header-img {
-    text-align: left;
     height: auto;
     width: 100%;
 
