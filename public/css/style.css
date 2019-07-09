@@ -2,6 +2,9 @@
     --themcolor: #1E90FF;
     --secondsvg: #FFD54F;
     --firstsvg: #4CAF50;
+    --snow : #FFFFFF;
+    --black:#2C3335;
+    --paragraph:#616C6F;
 }
 
 @import url('https://fonts.googleapis.com/css?family=DM+Serif+Text&display=swap');
@@ -117,7 +120,7 @@
 }
 
 .card {
-    height: 15rem;
+    height: 100% !important;
 }
 
 .User,
@@ -219,11 +222,86 @@ footer h6 {
     display: flex !important;
     margin:1rem;
     height:100%;
+    padding:0 1rem;
 }
 
 .services-button{
     margin-top:1rem !important;
+    border:1px solid var(--themcolor);  
+    background-color: var(--snow);
+    border-radius: 1rem;
+    padding:0rem 3rem;
+    color:var(--black);
+    transition: all 150ms ease-in;
+}
+.services-header{
+    font-weight: bold !important;
+    font-size: 1.4rem !important;
+    transition: all 150ms ease-in;
+
+}
+.services-summary{
+    color:var(--paragraph);
+}
+.card:hover .services-button{
+    background-color: var(--themcolor);
+    color:var(--snow) !important;
+}
+.card:hover .services-header{
+    color:var(--themcolor) !important;
 }
 .services-icon{
     font-size: 2.5rem !important;
 }
+
+.service-container{
+    margin:2rem 2rem;
+}
+@media (max-width:600px){
+    .service-container{
+        margin:0;
+    }
+}
+
+/* ************************************** */
+/* Error Page */
+
+
+
+.error {
+    height: 100%;
+    width: 100%;
+
+}
+
+.error-heading {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header h4 {
+    font-weight: bold;
+    font-size: 3.5rem;
+}
+
+.header p {
+    font-weight: 500;
+    font-size: 1.0rem;
+
+}
+
+.header-img {
+    text-align: left;
+    height: auto;
+    width: 100%;
+
+}
+
+.header-img img {
+    height: 25rem;
+}
+
+/* *********** */

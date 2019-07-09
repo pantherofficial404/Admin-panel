@@ -52,7 +52,7 @@ app.use((error,req,res,next)=>{
 
 
 // Running The Server
-const PORT = 4000;
+const PORT = 5000;
 app.listen(PORT,(err)=>{
     if(err){
         console.log("Something went on running server. Please restart server");
